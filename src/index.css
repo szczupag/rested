@@ -43,11 +43,11 @@ body {
 }
 
 .navbar li.active {
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #8d9fab;
 }
 
 .navbar li a {
-  color: inherit;
+  color: #8d9fab;
   text-decoration: none;
   display: flex;
   flex-direction: column;
@@ -55,4 +55,34 @@ body {
   align-items: center;
   height: 100%;
   justify-content: space-between;
+  margin: 5px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+button {
+  background-color: #1d3f57;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 16px;
+  outline: none !important;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #8d9fab;
+}
+
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
 }
