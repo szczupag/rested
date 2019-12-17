@@ -1,13 +1,8 @@
-import React, { useState } from 'react'
+import React, {Component, useState} from 'react'
 import PageWrapper from './PageWrapper'
 import Select from 'react-select'
+import {Bar} from 'react-chartjs-2';
 
-const options = [
-    { value: 'today', label: 'Today' },
-    { value: 'thisWeek', label: 'This Week' },
-    { value: 'thisMonth', label: 'This Month' },
-    { value: 'lastMonth', label: 'Last Month' },
-];
 
 const customStyles = {
     option: (provided, state) => ({
@@ -41,19 +36,62 @@ const customStyles = {
         const opacity = state.isDisabled ? 0.5 : 1;
         const transition = 'opacity 300ms';
 
-        return { ...provided, opacity, transition, color: "#fff" };
+        return {...provided, opacity, transition, color: "#fff"};
     }
 }
 
-const Report = () => {
-    const [selectedOption, setSelectedOption] = useState(options[0])
+const options = [
+    {value: 'thisWeek', label: 'This Week'},
+    {value: 'lastWeek', label: 'Last Week'},
+    {value: 'thisMonth', label: 'This Month'},
+    {value: 'lastMonth', label: 'Last Month'},
+];
+
+const data = {
+    labels: ['M', 'T', 'W', 'T', 'F', 'S', 'S'],
+    datasets: [
+        {
+            label: 'My First dataset',
+            backgroundColor: '#86FFEA',
+            borderColor: '#86FFEA',
+            borderWidth: 1,
+            hoverBackgroundColor: 'rgba(255,99,132,0.4)',
+            hoverBorderColor: 'rgba(255,99,132,1)',
+        }
+    ]
+};
+
+class Report extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedOption: options[0],
+            data: {
+                thisWeek: [6, 5, 8, 11, 5, 4, 8, 11],
+                lastWeek: [9, 7, 6, 6, 8, 7, 6, 11],
+                thisMonth: [3, 10, 9, 9, 8, 6, 3, 7],
+                lastMonth: [7, 10, 7, 7, 8, 9, 10, 11],
+            },
+            avg: {
+                thisWeek: "6H 46M",
+                lastWeek: "7H 20M",
+                thisMonth: "8H 10M",
+                lastMonth: "7H 38M"
+            }
+        };
+    }
+
+setSelectedOption = (selectedOption) => this.setState({selectedOption})
+
+render()
+{
     return (
         <PageWrapper>
             <div className="select-wrapper">
                 <Select
                     styles={customStyles}
-                    value={selectedOption}
-                    onChange={setSelectedOption}
+                    value={this.state.selectedOption}
+                    onChange={this.setSelectedOption}
                     options={options}
                     isSearchable={false}
                     theme={theme => ({
@@ -66,8 +104,37 @@ const Report = () => {
                     })}
                 />
             </div>
+            <div>
+                <h2>Sleep duration</h2>
+                <Bar
+                    legend={null}
+                    data={{
+                        ...data,
+                        datasets: [{
+                            ...data.datasets[0],
+                            data: this.state.data[this.state.selectedOption.value]
+                        }]
+                    }}
+                    width={100}
+                    height={250}
+                    options={{
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true,
+                                    min: 0,
+                                    max: 12
+                                }
+                            }]
+                        },
+                        maintainAspectRatio: false
+                    }}
+                />
+            </div>
+            {this.state.avg[this.state.selectedOption.value]}
         </PageWrapper>
     )
+}
 }
 
 export default Report
