@@ -91,6 +91,11 @@ button:hover {
     margin: 0 80px;
 }
 
+.time-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .slider-wrapper {
     display: flex;
     justify-content: center;
