@@ -86,3 +86,9 @@ button:hover {
   justify-content: center;
   margin-top: 50px;
 }
+
+.select-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
