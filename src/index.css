@@ -82,6 +82,15 @@ button:hover {
 }
 
 .btn-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.select-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
     display: flex;
     justify-content: center;
     margin-top: 50px;
