@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: sans-serif;
     color: #fff;
+    background-color: #171f2a;
 }
 
 * {
@@ -12,7 +13,6 @@ body {
     width: 100%;
     min-height: 100vh;
     margin: 0;
-    background-color: #171f2a;
 }
 
 .mobile-container {
@@ -58,6 +58,7 @@ body {
     margin: 5px 0;
 }
 
+h1,
 h2 {
     text-align: center;
     margin-top: 50px;
@@ -65,6 +66,7 @@ h2 {
     font-size: 20px;
 }
 
+.btn-wrapper a,
 button {
     background-color: #1d3f57;
     border: none;
@@ -72,11 +74,13 @@ button {
     border-radius: 20px;
     color: #fff;
     text-transform: uppercase;
+    text-decoration: none;
     font-size: 16px;
     outline: none !important;
     cursor: pointer;
 }
 
+.btn-wrapper a:hover,
 button:hover {
     background-color: #8d9fab;
 }
@@ -109,4 +113,24 @@ button:hover {
     display: flex;
     justify-content: center;
     padding-top: 50px;
+}
+
+.sleep-start-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30%;
+}
+
+.sleep-start-content {
+  padding: 0 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sleep-start-content img{
+  max-width: 30%;
 }

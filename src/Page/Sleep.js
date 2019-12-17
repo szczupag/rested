@@ -1,10 +1,10 @@
-import React, {Component} from 'react'
-import PageWrapper from './PageWrapper'
+import React, { Component } from 'react'
 import CircularSlider from '@fseehawer/react-circular-slider';
 import Button from '../Button'
 import Tooltip from 'rc-tooltip';
 import Slider from 'rc-slider';
 import moment from 'moment'
+import SleepStart from './SleepStart'
 
 import 'rc-slider/assets/index.css';
 import 'rc-tooltip/assets/bootstrap.css';
@@ -24,7 +24,7 @@ const sleepDuration = () => {
 };
 
 const handle = (props) => {
-    const {value, dragging, index, ...restProps} = props;
+    const { value, dragging, index, ...restProps } = props;
     return (
         <Tooltip
             prefixCls="rc-slider-tooltip"
@@ -42,14 +42,15 @@ const createSliderWithTooltip = Slider.createSliderWithTooltip;
 const Range = createSliderWithTooltip(Slider.Range);
 const Handle = Slider.Handle;
 
-const wrapperStyle = {width: "100%", margin: 0};
+const wrapperStyle = { width: "100%", margin: 0 };
 
-class Sleep extends Component{
+class Sleep extends Component {
     constructor(props) {
         super(props);
         this.state = {
             from: moment().format('h:mm a'),
-            to: moment().format('h:mm a')
+            to: moment().format('h:mm a'),
+            startSleep: false,
         }
     }
 
@@ -62,46 +63,53 @@ class Sleep extends Component{
         });
     };
 
+    startSleep = () => {
+
+    }
+
     render() {
-        return (
-            <PageWrapper>
-                <h2>Set sleep hours</h2>
-                <div className="time-wrapper">
-                    {`${this.state.from} - ${this.state.to}`}
-                </div>
-                <div className="slider-wrapper">
-                    <CircularSlider
-                        onChange={value => {
-                            this.changeTime(value.replace('h','').replace('m','').split(':'))
-                        }}
-                        knobColor="#86FFEA"
-                        progressSize={12}
-                        trackColor="#171f2a"
-                        progressColorFrom="#00847b"
-                        progressColorTo="#a2fff0"
-                        progressLineCap="round"
-                        data={sleepDuration()}
-                        label="SLEEP"
-                        labelColor="ffffff"
-                    />
-                </div>
-                <h2>Wake up shift</h2>
-                <div className="horizontal-slider-wrapper">
-                    <div style={wrapperStyle}>
-                        <Slider
-                            min={0}
-                            max={30}
-                            defaultValue={15}
-                            handle={handle}
-                            railStyle={{backgroundColor: '#417473'}}
-                            trackStyle={{backgroundColor: '#86FFEA'}}
-                            dotStyle={{backgroundColor: '#00847b'}}
+        if (!this.state.sleepStart) {
+            return (
+                <>
+                    <h2>Set sleep hours</h2>
+                    <div className="time-wrapper">
+                        {`${this.state.from} - ${this.state.to}`}
+                    </div>
+                    <div className="slider-wrapper">
+                        <CircularSlider
+                            onChange={value => {
+                                this.changeTime(value.replace('h', '').replace('m', '').split(':'))
+                            }}
+                            knobColor="#86FFEA"
+                            progressSize={12}
+                            trackColor="#171f2a"
+                            progressColorFrom="#00847b"
+                            progressColorTo="#a2fff0"
+                            progressLineCap="round"
+                            data={sleepDuration()}
+                            label="SLEEP"
+                            labelColor="ffffff"
                         />
                     </div>
-                </div>
-                <Button>Sleep</Button>
-            </PageWrapper>
-        )
+                    <h2>Wake up shift</h2>
+                    <div className="horizontal-slider-wrapper">
+                        <div style={wrapperStyle}>
+                            <Slider
+                                min={0}
+                                max={30}
+                                defaultValue={15}
+                                handle={handle}
+                                railStyle={{ backgroundColor: '#417473' }}
+                                trackStyle={{ backgroundColor: '#86FFEA' }}
+                                dotStyle={{ backgroundColor: '#00847b' }}
+                            />
+                        </div>
+                    </div>
+                    <Button onClick={() => this.setState({ sleepStart: true })}>Sleep</Button>
+                </>
+            )
+        }
+        return <SleepStart onBack={() => this.setState({ sleepStart: false })} />
     }
 }
 

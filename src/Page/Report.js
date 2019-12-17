@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import PageWrapper from './PageWrapper'
 import Select from 'react-select'
+import { NavLink } from 'react-router-dom'
 
 const options = [
     { value: 'today', label: 'Today' },
@@ -48,25 +49,23 @@ const customStyles = {
 const Report = () => {
     const [selectedOption, setSelectedOption] = useState(options[0])
     return (
-        <PageWrapper>
-            <div className="select-wrapper">
-                <Select
-                    styles={customStyles}
-                    value={selectedOption}
-                    onChange={setSelectedOption}
-                    options={options}
-                    isSearchable={false}
-                    theme={theme => ({
-                        ...theme,
-                        colors: {
-                            ...theme.colors,
-                            neutral50: '#fff !important',
-                            primary: '#fff',
-                        },
-                    })}
-                />
-            </div>
-        </PageWrapper>
+        <div className="select-wrapper">
+            <Select
+                styles={customStyles}
+                value={selectedOption}
+                onChange={setSelectedOption}
+                options={options}
+                isSearchable={false}
+                theme={theme => ({
+                    ...theme,
+                    colors: {
+                        ...theme.colors,
+                        neutral50: '#fff !important',
+                        primary: '#fff',
+                    },
+                })}
+            />
+        </div>
     )
 }
 

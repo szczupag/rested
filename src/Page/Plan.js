@@ -3,9 +3,7 @@ import PageWrapper from './PageWrapper'
 import Example from "../charts/example";
 
 const Plan = () => (
-    <PageWrapper>
-        <Example/>
-    </PageWrapper>
+    <Example/>
 )
 
 export default Plan

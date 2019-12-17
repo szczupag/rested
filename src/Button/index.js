@@ -1,8 +1,9 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Button = ({ children }) => (
+const Button = ({ children, to, onClick }) => (
     <div className="btn-wrapper">
-        <button>{children}</button>
+        {to ? <NavLink to={to}>{children}</NavLink> : <button onClick={onClick}>{children}</button>}
     </div>
 )
 
