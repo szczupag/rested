@@ -2,7 +2,6 @@ import React, {Component, useState} from 'react'
 import PageWrapper from './PageWrapper'
 import Select from 'react-select'
 import {Bar} from 'react-chartjs-2';
-import moment from "moment";
 
 
 const customStyles = {
@@ -117,13 +116,14 @@ render()
                         }]
                     }}
                     width={100}
-                    height={300}
+                    height={250}
                     options={{
                         scales: {
                             yAxes: [{
                                 ticks: {
                                     beginAtZero: true,
-                                    min: 0
+                                    min: 0,
+                                    max: 12
                                 }
                             }]
                         },
