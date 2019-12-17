@@ -1,6 +1,7 @@
 import React from 'react'
 import PageWrapper from './PageWrapper'
 import CircularSlider from '@fseehawer/react-circular-slider';
+import Button from '../Button'
 
 const sleepDuration = () => {
     let arr = []
@@ -18,6 +19,7 @@ const sleepDuration = () => {
 
 const Sleep = () => (
     <PageWrapper>
+        <h2>Set sleep hours</h2>
         <div className="slider-wrapper">
             <CircularSlider
                 onChange={ value => { console.log(value) } }
@@ -32,9 +34,9 @@ const Sleep = () => (
                 labelColor="ffffff"
             />
         </div>
+        <h2>Wake up shift</h2>
+        <Button>Sleep</Button>
     </PageWrapper>
-
-
 )
 
 export default Sleep
