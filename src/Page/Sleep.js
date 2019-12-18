@@ -111,7 +111,7 @@ class Sleep extends Component {
         }
         return (
             <Start
-                n={1}
+                n={0}
                 onBack={() => this.setState({ sleepStart: false })}
             >
                 <h1>Estimated Wake Up Time</h1>

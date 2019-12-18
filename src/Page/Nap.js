@@ -54,7 +54,7 @@ class Nap extends Component {
         }
         return (
             <Start
-                n={0}
+                n={1}
                 onBack={() => this.setState({ napStart: false })}
             >
                 <Sleeping>
