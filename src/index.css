@@ -134,7 +134,6 @@ button:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 30%;
 }
 
 .sleep-start-content {
@@ -200,7 +199,35 @@ button:hover {
 }
 
 .goal-tile-wrapper {
-    border: darkblue solid;
+    background: #1d3f57;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.goal-tile-wrapper h1 {
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 1em;
+    color: #86FFEA;
+    margin: 0;
+}
+
+.goal-tile-wrapper h2 {
+    margin: 0;
+    color: #8d9fab;
+}
+
+.goal-tile-wrapper img {
+    align-self: center;
+}
+
+.goal-tile-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .tile-icon {
