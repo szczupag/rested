@@ -4,6 +4,7 @@ import {Line} from 'rc-progress';
 import plan1 from '../assets/plan1_1.svg'
 import plan2 from '../assets/plan2_2.svg'
 import plan3 from '../assets/plan3.svg'
+import SleepEnded from "./SleepEnded";
 
 const data = [{
     title: "Sleepyhead",
@@ -41,6 +42,7 @@ const Plan = () => (
                 </div>
             )
         }
+        <SleepEnded n={1}/>
     </>
 )
 

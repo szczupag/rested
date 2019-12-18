@@ -182,6 +182,14 @@ button:hover {
     margin: 0;
 }
 
+.sleep-summary-bad {
+    color: red;
+}
+
+.sleep-summary-good {
+    color: greenyellow;
+}
+
 .rc-slider .rc-slider-handle {
     border: #86FFEA;
     background-color: #86FFEA;
