@@ -17,6 +17,7 @@ p {
     width: 100%;
     min-height: 100vh;
     margin: 0;
+    position: relative;
 }
 
 .mobile-container {
@@ -70,16 +71,14 @@ p {
     padding-top: 75px;
 }
 
-h1,
-h2 {
+h1, h2 {
     text-align: center;
     margin: 32px auto;
     font-weight: 500;
     font-size: 1.2em;
 }
 
-.btn-wrapper a,
-button {
+.btn-wrapper a, button {
     background-color: #1d3f57;
     border: none;
     padding: 10px 40px;
@@ -92,21 +91,20 @@ button {
     cursor: pointer;
 }
 
-.btn-wrapper a:hover,
-button:hover {
+.btn-wrapper a:hover, button:hover {
     background-color: #8d9fab;
 }
 
 .btn-wrapper {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
 }
 
 .select-wrapper {
-  display: flex;
-  justify-content: center;
-  margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
     display: flex;
     justify-content: center;
     margin-top: 50px;
@@ -130,24 +128,23 @@ button:hover {
 }
 
 .sleep-start-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .sleep-start-content {
-  padding: 0 20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .sleeping-mask-icon {
     max-width: 30%;
     animation: pulse 2s ease-in-out infinite;
-
 }
 
 @keyframes pulse {
@@ -267,17 +264,42 @@ button:hover {
     background-color: #1d3f57;
 }
 
-.nap-start-wrapper img{
+.nap-start-wrapper img {
     margin: 32px;
     animation: pulse 2s ease-in-out infinite;
     cursor: pointer;
 }
 
-.rating span{
+.rating span {
     margin: 0 8px;
 }
 
 .header-plan {
     text-align: left;
     margin-left: 25px;
+}
+
+.ad-box-wrapper {
+    width: 100%;
+    background-color: white;
+    height: 130px;
+    z-index: 10;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.ad-box-text {
+    color: #171f2a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ad-box-text h1 {
+    margin: 0 0 10px 0;
+}
+
+.ad-box-wrapper img {
+    height: 130px;
 }
