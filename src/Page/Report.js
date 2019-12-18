@@ -96,38 +96,40 @@ class Report extends Component {
                 </div>
                 <div>
                     <h2>Sleep duration</h2>
-                    <Bar
-                        legend={null}
-                        data={{
-                            ...data,
-                            datasets: [{
-                                ...data.datasets[0],
-                                data: this.state.data[this.state.selectedOption.value]
-                            }]
-                        }}
-                        width={100}
-                        height={250}
-                        options={{
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        beginAtZero: true,
-                                        min: 0,
-                                        max: 12
-                                    },
-                                    gridLines: {
-                                        display: false,
-                                    },
-                                }],
-                                xAxes: [{
-                                    gridLines: {
-                                        display: false,
-                                    },
-                                }],
-                            },
-                            maintainAspectRatio: false
-                        }}
-                    />
+                    <div className="chart-wrapper">
+                        <Bar
+                            legend={null}
+                            data={{
+                                ...data,
+                                datasets: [{
+                                    ...data.datasets[0],
+                                    data: this.state.data[this.state.selectedOption.value]
+                                }]
+                            }}
+                            width={100}
+                            height={250}
+                            options={{
+                                scales: {
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true,
+                                            min: 0,
+                                            max: 12
+                                        },
+                                        gridLines: {
+                                            display: false,
+                                        },
+                                    }],
+                                    xAxes: [{
+                                        gridLines: {
+                                            display: false,
+                                        },
+                                    }],
+                                },
+                                maintainAspectRatio: false
+                            }}
+                        />
+                    </div>
                 </div>
                 <div className="avg-wrapper">
                     <p className="avg-title">Average</p>
