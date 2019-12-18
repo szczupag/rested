@@ -274,6 +274,11 @@ h1, h2 {
     margin: 0 8px;
 }
 
+.header-plan {
+    text-align: left;
+    margin-left: 25px;
+}
+
 .ad-box-wrapper {
     width: 100%;
     background-color: white;
@@ -297,4 +302,9 @@ h1, h2 {
 
 .ad-box-wrapper img {
     height: 130px;
+}
+
+.sleep-start-content,
+.sleep-start {
+    margin-top: 100px;
 }

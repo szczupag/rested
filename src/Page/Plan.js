@@ -26,7 +26,7 @@ const data = [{
 
 const Plan = () => (
     <>
-        <h1>Your goals</h1>
+        <h1 className="header-plan">Your goals</h1>
         {
             data.map((d) =>
                 <div className="goal-tile-wrapper">
