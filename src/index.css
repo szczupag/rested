@@ -186,3 +186,11 @@ button:hover {
     border: #86FFEA;
     background-color: #86FFEA;
 }
+
+.goal-tile-wrapper {
+    border: darkblue solid;
+}
+
+.tile-icon {
+    width: 100px;
+}
