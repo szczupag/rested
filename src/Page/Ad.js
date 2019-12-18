@@ -1,20 +1,15 @@
-import React, {Component} from "react";
+import React from "react";
 
-class Ad extends Component {
-    constructor(props) {
-        super(props);
-    }
-
-    render() {
-        return (
-            <div className="ad-wrapper">
-                <img src={this.props.img}/>
-                <p>sdasddads</p>
-                <h1>{this.props.title}</h1>
-                <p>{this.props.description}</p>
-            </div>
-        )
-    }
-}
+const Ad = ({
+    img,
+    title,
+    description
+}) => (
+    <div className="ad-wrapper">
+        <img src={img} />
+        <h1>{title}</h1>
+        <p>{description}</p>
+    </div>
+);
 
 export default Ad;

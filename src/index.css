@@ -17,6 +17,7 @@ p {
     width: 100%;
     min-height: 100vh;
     margin: 0;
+    position: relative;
 }
 
 .mobile-container {
@@ -237,5 +238,8 @@ button:hover {
 .ad-wrapper {
     width: 100%;
     background-color: white;
-    height: 30px;
+    height: 100px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
 }
