@@ -4,7 +4,8 @@ import Button from '../Button'
 import Tooltip from 'rc-tooltip';
 import Slider from 'rc-slider';
 import moment from 'moment'
-import SleepStart from './SleepStart'
+import Start from './Start'
+import Sleeping from '../Sleeping'
 
 import 'rc-slider/assets/index.css';
 import 'rc-tooltip/assets/bootstrap.css';
@@ -109,10 +110,14 @@ class Sleep extends Component {
             )
         }
         return (
-            <SleepStart
-                wakeUpTime={this.state.to}
+            <Start
                 onBack={() => this.setState({ sleepStart: false })}
-            />
+            >
+                <h1>Estimated Wake Up Time</h1>
+                <Sleeping>
+                    <p className="wake-up-time">{this.state.to}</p>
+                </Sleeping>
+            </Start>
         );
     }
 }
