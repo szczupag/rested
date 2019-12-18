@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import moment from 'moment'
 import nap from '../assets/nap.svg'
 import Sleeping from '../Sleeping'
-import Start from './Start'
+import Start from './SleepStart'
 
 class Nap extends Component {
     constructor(props) {
@@ -53,7 +53,10 @@ class Nap extends Component {
             )
         }
         return (
-            <Start onBack={() => this.setState({ napStart: false })}>
+            <Start
+                n={0}
+                onBack={() => this.setState({ napStart: false })}
+            >
                 <Sleeping>
                     <p className="wake-up-time">Napping</p>
                 </Sleeping>

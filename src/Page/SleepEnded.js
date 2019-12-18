@@ -52,8 +52,8 @@ class SleepEnded extends Component {
                     <Line
                         legend={null}
                         data={datasets[this.props.n]}
-                        width={100}
-                        height={250}
+                        width={300}
+                        height={150}
                         options={{
                             scales: {
                                 yAxes: [{
@@ -80,6 +80,7 @@ class SleepEnded extends Component {
                     <p className="avg-title">SLEEP RATING</p>
                     <p className={datasets[this.props.n].data_text.className}>{datasets[this.props.n].data_text.text}</p>
                 </div>
+                {this.props.children}
             </>
         )
     }
