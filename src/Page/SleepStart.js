@@ -23,14 +23,14 @@ class SleepStart extends Component {
         let modeComponent = <PutMaskOn />
         if (mode === 'START') {
             modeComponent = (
-                <>
+                <div className="sleep-start">
                     {this.props.children}
                     <Button onClick={() => this.setState({ mode: 'RATE' })}>Stop</Button>
-                </>
+                </div>
             )
         } else if (mode === 'RATE') {
             modeComponent = (
-                <>
+                <div className="sleep-start">
                     <h1>How do you feel?</h1>
                     <div className="rating">
                         <ReactStars
@@ -41,7 +41,7 @@ class SleepStart extends Component {
                             color2={'#86FFEA'}
                         />
                     </div>
-                </>
+                </div>
             )
         } else if (mode === 'STATS') {
             modeComponent = (

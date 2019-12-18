@@ -303,3 +303,8 @@ h1, h2 {
 .ad-box-wrapper img {
     height: 130px;
 }
+
+.sleep-start-content,
+.sleep-start {
+    margin-top: 100px;
+}
