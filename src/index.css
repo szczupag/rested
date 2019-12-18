@@ -233,3 +233,9 @@ button:hover {
 .rating span{
     margin: 0 8px;
 }
+
+.ad-wrapper {
+    width: 100%;
+    background-color: white;
+    height: 30px;
+}
