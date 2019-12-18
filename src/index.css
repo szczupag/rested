@@ -154,3 +154,22 @@ button:hover {
 .wake-up-time {
     font-size: 1em;
 }
+
+.avg-wrapper {
+    background-color: #1d3f57;
+    width: 150px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.avg-title {
+    margin: 0 0 10px 0;
+    text-transform: uppercase;
+    color: #86FFEA;
+    font-size: 0.7em;
+}
+
+.avg-value {
+    margin: 0;
+}

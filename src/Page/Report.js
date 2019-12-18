@@ -123,7 +123,10 @@ class Report extends Component {
                         }}
                     />
                 </div>
-                {this.state.avg[this.state.selectedOption.value]}
+                <div className="avg-wrapper">
+                    <p className="avg-title">Average</p>
+                    <p className="avg-value">{this.state.avg[this.state.selectedOption.value]}</p>
+                </div>
             </>
         )
     }
