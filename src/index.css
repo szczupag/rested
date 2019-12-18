@@ -9,6 +9,10 @@ body {
     box-sizing: border-box;
 }
 
+p {
+    margin: 0;
+}
+
 .page-wrapper {
     width: 100%;
     min-height: 100vh;
@@ -185,4 +189,47 @@ button:hover {
 .rc-slider .rc-slider-handle {
     border: #86FFEA;
     background-color: #86FFEA;
+}
+
+.nap-controls-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 32px;
+}
+
+.nap-controls-wrapper p {
+    font-size: 1.2em;
+}
+
+.nap-controls-wrapper button {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    padding: 0;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.nap-start-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    width: 250px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #1d3f57;
+}
+
+.nap-start-wrapper img{
+    margin: 32px;
+    animation: pulse 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.rating span{
+    margin: 0 8px;
 }
