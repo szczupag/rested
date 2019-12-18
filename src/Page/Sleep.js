@@ -79,7 +79,7 @@ class Sleep extends Component {
                                 this.changeTime(value.replace('h', '').replace('m', '').split(':'))
                             }}
                             knobColor="#86FFEA"
-                            progressSize={12}
+                            progressSize={20}
                             trackColor="#171f2a"
                             progressColorFrom="#00847b"
                             progressColorTo="#a2fff0"
