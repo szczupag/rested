@@ -61,9 +61,9 @@ body {
 h1,
 h2 {
     text-align: center;
-    margin-top: 50px;
+    margin: 16px auto;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 .btn-wrapper a,
@@ -75,7 +75,7 @@ button {
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 0.8em;
     outline: none !important;
     cursor: pointer;
 }
@@ -107,12 +107,14 @@ button:hover {
 .time-wrapper {
     display: flex;
     justify-content: center;
+    color: #8e9fab;
+    font-size: 1em;
 }
 
 .slider-wrapper {
     display: flex;
     justify-content: center;
-    padding-top: 50px;
+    margin: 30px 0;
 }
 
 .sleep-start-wrapper {
@@ -147,4 +149,8 @@ button:hover {
     100% {
         transform: scale(1);
     }
+}
+
+.wake-up-time {
+    font-size: 1em;
 }

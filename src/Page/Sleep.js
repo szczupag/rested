@@ -63,9 +63,7 @@ class Sleep extends Component {
         });
     };
 
-    startSleep = () => {
 
-    }
 
     render() {
         if (!this.state.sleepStart) {
@@ -86,8 +84,9 @@ class Sleep extends Component {
                             progressColorFrom="#00847b"
                             progressColorTo="#a2fff0"
                             progressLineCap="round"
+                            valueFontSize="32px"
                             data={sleepDuration()}
-                            label="SLEEP"
+                            label="Sleep"
                             labelColor="ffffff"
                         />
                     </div>
@@ -109,7 +108,12 @@ class Sleep extends Component {
                 </>
             )
         }
-        return <SleepStart onBack={() => this.setState({ sleepStart: false })} />
+        return (
+            <SleepStart
+                wakeUpTime={this.state.to}
+                onBack={() => this.setState({ sleepStart: false })}
+            />
+        );
     }
 }
 

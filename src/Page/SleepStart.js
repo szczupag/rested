@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Button from '../Button'
 import mask from '../assets/mask.svg'
+import Sleeping from '../Sleeping'
 
 class SleepStart extends Component {
     constructor(props) {
@@ -30,7 +31,10 @@ class SleepStart extends Component {
                     )
                     : (
                         <>
-                            <h1>Sleep well</h1>
+                            <h1>Estimated Wake Up Time</h1>
+                            <Sleeping>
+                                <p className="wake-up-time">{this.props.wakeUpTime}</p>
+                            </Sleeping>
                             <Button onClick={this.props.onBack}>Stop</Button>
                         </>
 
