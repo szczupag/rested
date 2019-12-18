@@ -110,6 +110,7 @@ class Sleep extends Component {
         }
         return (
             <SleepStart
+                sleepStart={this.state.from}
                 wakeUpTime={this.state.to}
                 onBack={() => this.setState({ sleepStart: false })}
             />

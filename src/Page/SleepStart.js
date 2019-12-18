@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Button from '../Button'
-import mask from '../assets/mask.svg'
 import Sleeping from '../Sleeping'
+import PutMaskOn from '../PutMaskOn'
 
 class SleepStart extends Component {
     constructor(props) {
@@ -22,12 +22,7 @@ class SleepStart extends Component {
             <div className="sleep-start-wrapper">
                 {this.state.hidden
                     ? (
-                        <>
-                            <div className="sleep-start-content">
-                                <img src={mask} class="sleeping-mask-icon"/>
-                                <h1>Put your Rested Eye Mask on</h1>
-                            </div>
-                        </>
+                        <PutMaskOn />
                     )
                     : (
                         <>
