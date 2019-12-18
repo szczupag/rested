@@ -1,5 +1,7 @@
-import React, {Component} from 'react'
-import {Line} from 'react-chartjs-2';
+import React, { Component } from 'react'
+import { Line } from 'react-chartjs-2';
+import Ad from './Ad'
+import spanko from '../assets/spanko.jpg'
 
 const datasets = [
     {
@@ -47,13 +49,13 @@ class SleepEnded extends Component {
     render() {
         return (
             <>
-                <div>
-                    <h2>Sleep depth</h2>
+                <h2>Sleep depth</h2>
+                <div className="chart-wrapper">
                     <Line
                         legend={null}
                         data={datasets[this.props.n]}
                         width={300}
-                        height={150}
+                        height={250}
                         options={{
                             scales: {
                                 yAxes: [{
@@ -81,6 +83,11 @@ class SleepEnded extends Component {
                     <p className={datasets[this.props.n].data_text.className}>{datasets[this.props.n].data_text.text}</p>
                 </div>
                 {this.props.children}
+                <Ad
+                    img={spanko}
+                    title="PODUSZKA SPANKO"
+                    description="Nowe wzory już dostępne"
+                />
             </>
         )
     }
