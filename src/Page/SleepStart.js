@@ -23,7 +23,7 @@ class SleepStart extends Component {
                     ? (
                         <>
                             <div className="sleep-start-content">
-                                <img src={mask} />
+                                <img src={mask} class="sleeping-mask-icon"/>
                                 <h1>Put your Rested Eye Mask on</h1>
                             </div>
                         </>

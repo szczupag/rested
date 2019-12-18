@@ -131,6 +131,20 @@ button:hover {
   align-items: center;
 }
 
-.sleep-start-content img{
-  max-width: 30%;
+.sleeping-mask-icon {
+    max-width: 30%;
+    animation: pulse 2s ease-in-out infinite;
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
