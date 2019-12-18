@@ -50,32 +50,34 @@ class SleepEnded extends Component {
         return (
             <>
                 <h2>Sleep depth</h2>
-                <Line
-                    legend={null}
-                    data={datasets[this.props.n]}
-                    width={300}
-                    height={150}
-                    options={{
-                        scales: {
-                            yAxes: [{
-                                ticks: {
-                                    beginAtZero: true,
-                                    min: 0,
-                                    max: 10
-                                },
-                                gridLines: {
-                                    display: false,
-                                },
-                            }],
-                            xAxes: [{
-                                gridLines: {
-                                    display: false,
-                                },
-                            }],
-                        },
-                        maintainAspectRatio: false
-                    }}
-                />
+                <div className="chart-wrapper">
+                    <Line
+                        legend={null}
+                        data={datasets[this.props.n]}
+                        width={300}
+                        height={250}
+                        options={{
+                            scales: {
+                                yAxes: [{
+                                    ticks: {
+                                        beginAtZero: true,
+                                        min: 0,
+                                        max: 10
+                                    },
+                                    gridLines: {
+                                        display: false,
+                                    },
+                                }],
+                                xAxes: [{
+                                    gridLines: {
+                                        display: false,
+                                    },
+                                }],
+                            },
+                            maintainAspectRatio: false
+                        }}
+                    />
+                </div>
                 <div className="avg-wrapper">
                     <p className="avg-title">SLEEP RATING</p>
                     <p className={datasets[this.props.n].data_text.className}>{datasets[this.props.n].data_text.text}</p>
