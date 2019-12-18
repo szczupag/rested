@@ -1,7 +1,5 @@
-import React, { Component, useState } from 'react'
-import PageWrapper from './PageWrapper'
+import React, { Component } from 'react'
 import Select from 'react-select'
-import { NavLink } from 'react-router-dom'
 import { Bar } from 'react-chartjs-2';
 
 
@@ -16,7 +14,7 @@ const customStyles = {
         ...provided,
         width: '200px',
     }),
-    menu: (provided, state) => ({
+    menu: (provided) => ({
         ...provided,
         backgroundColor: '#1d3f57',
     }),
@@ -116,8 +114,16 @@ class Report extends Component {
                                         beginAtZero: true,
                                         min: 0,
                                         max: 12
-                                    }
-                                }]
+                                    },
+                                    gridLines: {
+                                        display: false,
+                                    },
+                                }],
+                                xAxes: [{
+                                    gridLines: {
+                                        display: false,
+                                    },
+                                }],
                             },
                             maintainAspectRatio: false
                         }}
